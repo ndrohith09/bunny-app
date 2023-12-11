@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  bunnyapp:
+    # Build the image from the local Dockerfile
+    build: ./
+    
+    # Expose port 8000 for internal communication 
+    ports:
+      - 8000:8000
+
+    # Define restart policy to automatically restart the service in case of failures
+    restart: always
